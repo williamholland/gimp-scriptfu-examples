@@ -23,4 +23,4 @@
  SF-FILENAME   "File"                          (string-append gimp-data-directory ""))
 
 
-(script-fu-menu-register "scriptfu-open-file" "<Image>/File/Create/Design")
+(script-fu-menu-register "scriptfu-open-file" "<Image>/Script-Fu/Examples")
