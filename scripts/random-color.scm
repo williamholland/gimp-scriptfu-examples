@@ -1,4 +1,6 @@
-(define (random-color the-image the-drawable)
+(define (script-fu-random-color the-image the-drawable)
+
+  (gimp-image-undo-group-start the-image)
 
   (define color (car (gimp-image-pick-color the-image
                                        the-drawable
@@ -7,7 +9,6 @@
                                        FALSE
                                        FALSE
                                        1)))
-
   
   (gimp-selection-none the-image)
 
@@ -29,17 +30,17 @@
                  (- (random 361) 1) ; hue 0-360
                  (- (random 101) 1) ; sat 0-100
                  (- (random 201) 101)) ; lightness -100-100
-
+ 
   (gimp-selection-none the-image)
   
+  (gimp-image-undo-group-end the-image)
   (gimp-displays-flush)) ; update what you see in the GUI
-  ;(gimp-image-clean-all the-image)) ; make it so won't be asked if you want to save changes when closing
 
 
 ; make the GUI
 (script-fu-register
- "random-color"                               ;func name
- "Random Color"                         ;menu label
+ "script-fu-random-color"                      ;func name
+ "Random Color"                                ;menu label
  "randomly tint image"
  "Will Holland"                                ;author
  ""                                            ;copyright notice
@@ -53,4 +54,4 @@
 
 
 ; register the menu
-(script-fu-menu-register "random-color" "<Image>/Script-Fu/Color")
+(script-fu-menu-register "script-fu-random-color" "<Image>/Script-Fu/Color")
