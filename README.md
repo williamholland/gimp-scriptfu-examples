@@ -16,6 +16,10 @@ The regex interface doesn't seem to be documented anywhere but reading the .h
 file I _think_ it only exposes `re-match`, which you can learn to use by
 looking at the example included here.
 
+# Installation
+
+For me scripts need to go into `~/.config/GIMP/2.10/scripts/`
+
 # Testing Checklist
 
 * does it work when no image is open?
