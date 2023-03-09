@@ -16,15 +16,20 @@ The regex interface doesn't seem to be documented anywhere but reading the .h
 file I _think_ it only exposes `re-match`, which you can learn to use by
 looking at the example included here.
 
-# Installation
-
-For me scripts need to go into `~/.config/GIMP/2.10/scripts/`
-
-# Testing Checklist
+## Testing Checklist
 
 * does it work when no image is open?
 * does it work when the image has not yet been saved?
 
-#  Best Practices
+##  Best Practices Checklist
 
 * are images/drawables in memory deleted when not needed?
+
+## Gotchas
+
+* most GIMP functions return a list, even if you're only expecting one return
+  value so if something isn't working as expected try wrapping it in `car`
+
+# Installation
+
+For me scripts need to go into `~/.config/GIMP/2.10/scripts/`
