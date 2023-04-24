@@ -32,4 +32,9 @@ looking at the example included here.
 
 # Installation
 
-For me scripts need to go into `~/.config/GIMP/2.10/scripts/`
+For me scripts need to go into 
+
+* `~/.config/GIMP/2.10/scripts/`
+* or on windows `C:\Users\%username%\AppData\Roaming\GIMP\2.10\scripts`
+
+In general you can find out by going to Edit>Preferences>Folders>Scripts
