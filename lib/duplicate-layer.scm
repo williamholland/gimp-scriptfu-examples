@@ -1,0 +1,5 @@
+(define (duplicate-layer layer)
+  (let* ((image (car (gimp-image-list)))
+         (duplicate (car (gimp-layer-copy layer TRUE))))
+    (gimp-image-insert-layer image duplicate 0 -1)
+    duplicate))
