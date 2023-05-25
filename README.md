@@ -29,6 +29,16 @@ To see debug messages do the following (it only works with strings):
 (gimp-message "foo")
 ```
 
+## Console
+
+There is a Scheme REPL in GIMP by going to `Filters>Script-Fu>Console`. It's quite hard to work with because most functions need image or drawable IDs. Here is a list of useful procedures when using the console
+
+```
+(gimp-image-list) ; see current images
+(gimp-image-get-layers <id>) ; see the top-level layers of the current image (you won't see ids of ones inside groups)
+(gimp-item-get-children <id>) ; see the children when you have an id of a group
+```
+
 ## Testing Checklist
 
 * does it work when no image is open?
