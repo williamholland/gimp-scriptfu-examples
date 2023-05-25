@@ -1,5 +1,7 @@
 # Developing
 
+## Language and Docs
+
 The language used is [Tiny-Fu](http://www.ve3syb.ca/software/tiny-fu/). This
 implements [this
 spec of R5RS Scheme](https://conservatory.scheme.org/schemers/Documents/Standards/R5RS/r5rs.pdf)
@@ -15,12 +17,15 @@ To find detailed reference for gimp functions go to `Filters>Script-Fu>Console>B
 
 There are also some functions from TSX (TinyScheme eXtensions) which is
 [documented
-here](https://github.com/mherasg/tsx/blob/master/tsx-functions.txt). e.g.
-`file-exists`, `getenv` and `time`
+here](https://github.com/mherasg/tsx/blob/master/tsx-functions.txt). It's good for system calls, getting env variables, getting the time and making network calls along with some misc IO things.
 
-The regex interface doesn't seem to be documented anywhere but reading the .h
-file I _think_ it only exposes `re-match`, which you can learn to use by
-looking at the example included here.
+
+### Other Functions
+
+Here are some functions that do exist but I can't find any documentation for where they come from
+
+* `(random n)` returns a random integer upto `n`
+* `re-match`
 
 ## Debugging
 
