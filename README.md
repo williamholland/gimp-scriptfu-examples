@@ -2,8 +2,14 @@
 
 The language used is [Tiny-Fu](http://www.ve3syb.ca/software/tiny-fu/). This
 implements [this
-spec](https://conservatory.scheme.org/schemers/Documents/Standards/R5RS/r5rs.pdf)
-and the pdf is a good reference.
+spec of R5RS Scheme](https://conservatory.scheme.org/schemers/Documents/Standards/R5RS/r5rs.pdf)
+and the pdf is a good reference. One quick way to test R5RS Scheme outside of GIMP is in DrRacket by using the language header `#!r5rs` like below
+
+```
+#!r5rs
+
+(display "hi!")
+```
 
 To find detailed reference for gimp functions go to `Filters>Script-Fu>Console>Browse`.
 
